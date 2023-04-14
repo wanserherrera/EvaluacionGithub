@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script
+      src="https://kit.fontawesome.com/8e7bf46a26.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>API GITHUB-FINDER</title>
+  </head>
+  <body class="bg-secondary">
+    <!-- VAMOS A CREAR UN BUSCADOR DE USUARIO DE GITHUB -->
+
+    <section id="conte"
+      class="container vh-100 d-flex align-items-center justify-content-center"
+    >
+      <div class="text-start w-75 text-body">
+        <h1 style="text-align: center; text-decoration: underline;">Github Finder</h1>
+        <div class="row mt-5">
+          <div class="col-md-10">
+            <input
+              id="github-search"
+              type="text"
+              class="form-control"
+              placeholder="Busca tu Usuario"
+            />
+          </div>
+          <div class="col-md-2">
+            <div class="d-grid gap-2">
+             
+                <button id="github-action-search" class="btn btn-danger"style="filter: drop-shadow(30px 10px 4px rgba(66, 21, 21, 0.345));">Buscar</button>
+                
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 mt-4">
+          <div class="card bg-blue-dark bg-success text-dark">
+            <div class="card-body p-5">
+              <div class="row">
+                <div class="col-md-2">
+                  <img
+                    id="img-profile"
+                    src="https://pbs.twimg.com/media/EmUM83TXIAAss5k.png"
+                    width="100"
+                    height="100"
+                    class="rounded-circle img-fluid"
+                    style="filter: drop-shadow(30px 10px 4px rgba(66, 21, 21, 0.345));"
+                    alt=""
+                  />
+                </div>
+                <div class="col-md-10"style="font-weight: bold;">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <i class="fa-regular fa-user" style="color: #9b3141"></i>
+                      <h4 id="github-name">The OctoCat</h4>
+                      <p id="github-username">@OctoCat</p>
+                    </div>
+                    <div class="col-md-6">
+                      <i
+                        class="fa-regular fa-calendar"
+                        style="color: #9b3141"
+                      ></i>
+                      <p id="github-joined">joined 20 jun 2011</p>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="card bg-blue-dark">
+                        <div class="card-body bg-info">
+                          <div class="row shadow rounded">
+                            <div class="col-md-4">
+                              <p>
+                                <i
+                                  class="fa-solid fa-box-archive"
+                                  style="color: #9b3141"
+                                ></i>
+                                Repos
+                              </p>
+                              <h4 id="github-repos">9</h4>
+                            </div>
+                            <div class="col-md-4">
+                              <span
+                                ><p>
+                                  <i
+                                    class="fa-solid fa-people-group"
+                                    style="color: #9b3141"
+                                  ></i>
+                                  Followers
+                                </p></span
+                              >
+                              <h4 id="github-followers">389</h4>
+                            </div>
+                            <div class="col-md-4">
+                              <p>
+                                <i
+                                  class="fa-solid fa-person-walking-arrow-right"
+                                  style="color: #9b3141"
+                                ></i>
+                                Following
+                              </p>
+
+                              <h4 id="github-following">120</h4>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-md-4">
+                              <p>
+                                <i
+                                  class="fa-regular fa-building"
+                                  style="color: #9b3141"
+                                ></i>
+                                company
+                              </p>
+                              <h4 id="github-company">Codigo</h4>
+                            </div>
+                            <div class="col-md-4">
+                              <p>
+                                <i
+                                  class="fa-brands fa-blogger"
+                                  style="color: #9b3141"
+                                ></i>
+                                blog
+                              </p>
+                              <h4 id="github-blog">Blog</h4>
+                            </div>
+                            <div class="col-md-4">
+                              <p>
+                                <i
+                                  class="fa-solid fa-user-doctor"
+                                  style="color: #9b3141"
+                                ></i>
+                                ocupación
+                              </p>
+                              <h4 id="github-bio">bio</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./api.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
