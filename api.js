@@ -76,7 +76,7 @@ const obtenerDatosGithub = async (username="wanserherrera") => {
   // ene ste ejemplio await esta haciendo lo sgte
   const response = await fetch(`https://api.github.com/users/${username}`);
   const data = await response.json();
-  if(data.message==='Not Found'){
+  if(data.message==='Not Found' ){
     Swal.fire({
         title: "Error de ejecusion",
         text: "El usuario ingresado no existe",
@@ -85,11 +85,14 @@ const obtenerDatosGithub = async (username="wanserherrera") => {
 
     return;
   }else{
-    Swal.fire({
+    if(username!="wanserherrera"){
+      Swal.fire({
         title: "Operacion exitosa",
         text: "Usuario existe",
         icon: "success"
     })
+    }
+    
 
   }
 
