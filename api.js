@@ -78,7 +78,7 @@ const obtenerDatosGithub = async (username="wanserherrera") => {
   const data = await response.json();
   if(data.message==='Not Found' ){
     Swal.fire({
-        title: "Error de ejecusion",
+        title: "Error",
         text: "El usuario ingresado no existe",
         icon: "error"
     });
@@ -87,7 +87,7 @@ const obtenerDatosGithub = async (username="wanserherrera") => {
   }else{
     if(username!="wanserherrera"){
       Swal.fire({
-        title: "Operacion exitosa",
+        title: "Exito",
         text: "Usuario existe",
         icon: "success"
     })
